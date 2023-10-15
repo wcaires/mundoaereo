@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles/styles.css" rel="stylesheet">
+    <title>MundoAereo</title>
+</head>
+
+<body>
+
+    <div>
+        <img src="./assets/images/logo.png" alt="Logo MundoAereo" />
+    </div>
+
+    <div>
+        <h1>Cadastrar Aeronaves</h1>
+    </div>
+
+    <div class="forms">
+
+        <!-- Formulário de Aeronaves -->
+        <div class="Aeronaves">
+            <h2>Aeronaves</h2>
+        </div>
+
+        <form action="processar-dados.php" method="post">
+            <div id="caixa-forms">
+                <label for="Modelo">Modelo:</label>
+                <input type="text" id="Modelo" placeholder="Digite o Modelo" />
+
+                <label for="NumeroId">NumeroID:</label>
+                <input type="number" id="NumeroId" placeholder="Digite o ID" />
+
+                <label for="Fabricante">Fabricante:</label>
+                <input type="text" id="Fabricante" placeholder="Digite o Fabricante" />
+
+                <label for="AnoFabricacao">Fabricação:</label>
+                <input type="date" id="AnoFabricacao" placeholder="Digite Ano Fabricação" />
+
+                <label for="MapaAssentos">Escolha o assento:</label>
+                <input type="text" id="MapaAssentos" placeholder="Mostrar o mapa" />
+            </div>
+        </form>
+
+    </div>
+
+    <!-- Aeroportos e Cidades -->
+    <div class="AeroportoseCidades">
+        <h1>Aeroportos e Cidades</h1>
+        <form action="processar-dados.php" method="post">
+            <div id="caixa-Aeroecidades">
+                <h2>Trajetos</h2>
+                <label for="CidadeOrigem">Origem:</label>
+                <input type="text" id="CidadeOrigem" />
+
+                <label for="CidadeDestino">Destino:</label>
+                <input type="text" id="CidadeDestino" />
+
+                <label for="Trecho">Trecho:</label>
+                <input type="text" id="Trecho" placeholder="Exemplo = Origem: Campinas-> Destino: São Paulo" />
+            </div>
+        </form>
+    </div>
+
+    <!-- Cadastro dos Voos -->
+    <div class="cadastrovoos">
+        <h1>Cadastro dos Voos</h1>
+        <form action="processar-dados.php" method="post">
+            <div id="caixa-voos">
+                <h2>Voo</h2>
+                <label for="NumeroVoo">Voo:</label>
+                <input type="number" id="NumeroVoo" required />
+
+                <label for="Data">Data:</label>
+                <input type="date" id="Data" placeholder="Digite a data do embarque" required />
+
+                <label for="TrechoVoo">Trecho:</label>
+                <input type="text" id="TrechoVoo" placeholder="Campinas->São Paulo (exemplo)" required />
+
+                <label for="HorarioPartida">Horário de Partida:</label>
+                <input type="time" id="HorarioPartida" placeholder="Horário partida" required />
+
+                <label for="HorarioChegada">Horário de Chegada:</label>
+                <input type="time" id="HorarioChegada" placeholder="Horário chegada" required />
+
+                <label for="AeroportoPartida">Aeroporto de Embarque:</label>
+                <input type="text" id="AeroportoPartida" placeholder="Digite o Aeroporto" required />
+
+                <label for="AeroportoChegada">Aeroporto de Desembarque:</label>
+                <input type="text" id="AeroportoChegada" placeholder="Digite o Aeroporto" required />
+            </div>
+        </form>
+    </div>
+
+    <!-- Botões -->
+    <div class="btn">
+        <button id="btnincluir" type="submit">Incluir</button>
+        <button id="btnalterar">Alterar</button>
+        <button id="btnexcluir">Excluir</button>
+    </div>
+
+    <!-- Lista de Cadastros -->
+    <div class="Listadecadastros">
+        <h1>Lista de Cadastros</h1>
+        <div id="caixa-lista"></div>
+    </div>
+
+    <script>
+      // Manipulador de evento para o botão "Incluir"
+      document.getElementById('btnIncluir').addEventListener('click', function () {
+          incluirDados('cadastrovoos');
+      });
+
+      // Função para incluir dados
+      function incluirDados(formId) {
+          // Obter os valores do formulário
+          var formulario = document.getElementById(formId);
+          var modelo = formulario.querySelector('#Modelo').value;
+      }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+h1{
+    color: black;
+font-size: 20px;
+}
+
+h2{
+    color: rgba(73, 72, 72, 0.87);
+    font-size: 18px;
+    font-style:oblique;
+}
+.Aeronaves{
+    margin-left: 15px;
+}
+.forms{
+    flex-wrap: wrap;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #dfd3d3;
+   
+}
+#caixa-forms{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+}
+#caixa-Aeroecidades{
+    flex-wrap: wrap;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: #dfd3d3;
+}
+#caixa-voos{
+    flex-wrap: wrap;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: #dfd3d3;
+    
+}
+.btn{
+    margin-top: 10px;
+    margin-left: 1100px;
+}
+.Listadecadastros{
+    color: black;
+    font-size: 20px;
+    
+}
+#caixa-lista{
+    flex-wrap: wrap;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #dfd3d3;
+}
